@@ -14,13 +14,11 @@ const MovieCard = ({ movie }) => {
   }
 
   return (
-    <div>
       <img
         src={IMAGE_BASE_URL + movie.poster_path}
         alt={movie.title}
-        className="w-[110px] h-[160px] rounded-lg"
+        className="w-[110px] h-[160px] mr-1 ml-1"
       />
-    </div>
   );
 };
 
