@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import GlobalApi from "../Services/GlobalApi";
 import MovieCard from "./MovieCard";
+
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original/";
+
 function MovieList({ genreId }) {
   const [movieList, setMovieList] = useState([]);
 
@@ -15,9 +18,9 @@ function MovieList({ genreId }) {
   };
 
   return (
-    <div>
+    <div className="flex">
       {movieList.map((item) => (
-        <MovieCard movie={item} />
+        <MovieCard key={item.id} movie={item} />
       ))}
     </div>
   );
